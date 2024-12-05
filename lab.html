@@ -1,0 +1,251 @@
+<!DOCTYPE HTML>
+<!--
+	Hyperspace by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
+<head>
+    <title>Decision trees</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/tree.css" />
+    <noscript>
+        <link rel="stylesheet" href="assets/css/noscript.css" />
+    </noscript>
+    <!-- load the d3.js library -->
+</head>
+
+<script>
+    function showMessage () {
+        const opts = document.getElementsByName('demo-priority');
+        for (let opt of opts) {            
+            if (opt.checked) {
+                const id = opt.id;
+                if (id === 'demo-priority-low') {
+                    alert("That is correct, well done")
+                    return
+                }
+            } 
+        }
+
+        alert("You got this wrong, try again!") 
+        
+    }
+</script>
+
+<body class="is-preload">
+
+    <!-- Sidebar -->
+    <section id="sidebar">
+        <div class="inner">
+            <nav>
+                <ul>
+                    <li><a href="#pseudo">Pseudo</a></li>                    
+
+                </ul>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+        <div style="margin-left: 8px; margin-right: 8px; padding: 6px; text-align: right;">
+			<a href="/index.html" style="color: #fff;">Home</a>
+			<a href="/details.html" style="margin-left: 10px; color: #fff;">Details</a>
+			<a href="/lab.html" style="color: #fff; margin-left: 10px;">Lab</a>
+		</div>
+
+        <section id="pseudo" class="wrapper style3 fade-up">
+            <div class="inner">
+                <div class="faetures">
+                    <!-- Concept -->
+                    <section>
+                        <h2>How to build a Decision Tree</h2>
+                        <p>
+                            We build a decisions tree recursively.
+                        <ol>
+                            <li>Calculate Entropy For a selected feature</li>
+                            <li>Calculate Information Gain or Gini Impurity</li>
+                            <li>Select the feature which performs best on above criteria</li>
+                            <li>Repeat the process for next node untill you cross a threshold or reach the final goal.</li>
+                        </ol>
+                        </p>
+        
+                        <h3>Pseudo Code</h3>
+                        <blockquote>
+        
+                            if all examples are in the same class then <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;return the class label. <br>
+                            else if no features left then <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;return the majority decision. <br>
+                            else if no examples left then <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;return the majority decision at the parent node. <br>
+                            else <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;choose a feature f. <br>
+                            for each value v of feature f do <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;build edge with label v. <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;build sub-tree using examples where the value of f is v. <br>
+                        </blockquote>
+                        <p>
+                            It is beyond the scope of this tutorial to explain the complete code implementation in Python, you
+                            may find it here.
+                            <a href="https://github.com/vikassrivastava18/Machine-Learning-Specialization-Coursera/blob/main/C2%20-%20Advanced%20Learning%20Algorithms/week4/C2W4A1/C2_W4_Decision_Tree_with_Markdown.ipynb"
+                                target="_blank" style="color: #fff;">Github</a>
+                        </p>
+        
+                    </section>
+        
+                    <!-- Termonology -->
+                    <section>
+                        <h2>Fun Trial</h2>
+                        <div class="box alt">
+                            <div class="row gtr-uniform">
+                                <div class="col-12">
+                                    <span class="">
+                                        <img src="/images/mushroom.jpg" width="500"
+                                            alt="image for termonology of decision trees" />
+                                    </span>
+                                </div>
+                                <p>Build a decision tree with following data, guess the first optimal feature to split data on
+                                    optimal.</p>
+        
+                                <table border="1">
+                                    <thead>
+                                        <tr>
+                                            <th>Index</th>
+                                            <th>Brown Cap</th>
+                                            <th>Stalk Shape</th>
+                                            <th>Solitary</th>
+                                            <th>Edible</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>0</td>
+                                            <td>1</td>
+                                            <td>1</td>
+                                            <td>1</td>
+                                            <td>1</td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>1</td>
+                                            <td>0</td>
+                                            <td>1</td>
+                                            <td>1</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>1</td>
+                                            <td>0</td>
+                                            <td>0</td>
+                                            <td>0</td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td>1</td>
+                                            <td>0</td>
+                                            <td>0</td>
+                                            <td>0</td>
+                                        </tr>
+                                        <tr>
+                                            <td>4</td>
+                                            <td>1</td>
+                                            <td>1</td>
+                                            <td>1</td>
+                                            <td>1</td>
+                                        </tr>
+                                        <tr>
+                                            <td>5</td>
+                                            <td>0</td>
+                                            <td>1</td>
+                                            <td>1</td>
+                                            <td>0</td>
+                                        </tr>
+                                        <tr>
+                                            <td>6</td>
+                                            <td>0</td>
+                                            <td>0</td>
+                                            <td>0</td>
+                                            <td>0</td>
+                                        </tr>
+                                        <tr>
+                                            <td>7</td>
+                                            <td>1</td>
+                                            <td>0</td>
+                                            <td>1</td>
+                                            <td>1</td>
+                                        </tr>
+                                        <tr>
+                                            <td>8</td>
+                                            <td>0</td>
+                                            <td>1</td>
+                                            <td>0</td>
+                                            <td>1</td>
+                                        </tr>
+                                        <tr>
+                                            <td>9</td>
+                                            <td>1</td>
+                                            <td>0</td>
+                                            <td>0</td>
+                                            <td>0</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+        
+        
+                                <div class="row gtr-uniform">
+        
+                                    <div class="col-4 col-12-small">
+                                        <input type="radio" id="demo-priority-low" name="demo-priority" checked>
+                                        <label for="demo-priority-low">Stalk Shape</label>
+                                    </div>
+                                    <div class="col-4 col-12-small">
+                                        <input type="radio" id="demo-priority-normal" name="demo-priority">
+                                        <label for="demo-priority-normal">Brown Cap</label>
+                                    </div>
+                                    <div class="col-4 col-12-small">
+                                        <input type="radio" id="demo-priority-high" name="demo-priority">
+                                        <label for="demo-priority-high">Solitary</label>
+                                    </div>
+                                    <ul class="actions">
+                                        <li><button class="button primary" onclick="showMessage()">Submit</button></li>
+                                    </ul>
+                                </div>
+        
+                            </div>
+                        </div>
+        
+                    </section>
+                </div>
+            </div>
+        </section>
+
+
+    </div>
+
+    <!-- Footer -->
+    <footer id="footer" class="wrapper style1-alt">
+        <div class="inner">
+            <ul class="menu">
+                <li>&copy; Untitled. All rights reserved.</li>
+                <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

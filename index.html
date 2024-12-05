@@ -1,0 +1,372 @@
+<!DOCTYPE HTML>
+<!--
+	Hyperspace by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
+<head>
+	<title>Decision trees</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<link rel="stylesheet" href="assets/css/tree.css" />
+	<noscript>
+		<link rel="stylesheet" href="assets/css/noscript.css" />
+	</noscript>
+
+
+</head>
+
+<body class="is-preload">
+
+	<!-- Sidebar -->
+	<section id="sidebar">
+		
+		<div class="inner">
+			<nav>
+				<ul>
+					<li><a href="#intro">Tree</a></li>
+					<li><a href="#one">Decisions</a></li>
+					<li><a href="#two">Advantages</a></li>
+
+					<li><a href="#three">Concepts</a></li>
+					<li><a href="#four">Maths</a></li>
+					<li><a href="#five">Summary</a></li>
+
+				</ul>
+			</nav>
+		</div>
+	</section>
+
+	<!-- Wrapper -->
+	<div id="wrapper">
+		<div style="margin-left: 8px; margin-right: 8px; padding: 6px; text-align: right;">
+			<a href="/index.html" style="color: #fff;">Home</a>
+			<a href="/details.html" style="margin-left: 10px; color: #fff;">Details</a>
+			<a href="/lab.html" style="color: #fff; margin-left: 10px;">Lab</a>
+		</div>
+		
+		<!-- Intro -->
+		<section id="intro" class="wrapper style1 fullscreen fade-up">
+			<div class="inner">
+				<h1>Decision trees</h1>
+			</div>
+		</section>
+
+		<!-- One -->
+		<section id="one" class="wrapper style2 spotlights">
+			<section>
+				<a href="#" class="image"><img src="images/emoji.png" alt="" data-position="center center" /></a>
+				<div class="content">
+					<div class="inner">
+						<h2>Should I Use Emoji?</h2>
+
+						<ol class="">
+							<li>
+								Age Less Than 9 Or Greater Than 65?
+							</li>
+							<li>
+								Conversation is formal or informal?
+							</li>
+							<li>
+								Want to get fired?
+							</li>
+
+						</ol>
+					</div>
+				</div>
+			</section>
+			<section>
+				<a href="#" class="image"><img src="images/pets.png" alt="" data-position="top center" /></a>
+				<div class="content">
+					<div class="inner">
+						<h2>Which Pet Is Right For You?</h2>
+						<ol class="">
+							<li>
+								Want it to treat you as a master?
+							</li>
+							<li>
+								Want affection in return from the pet?
+							</li>
+							<li>
+								Do you own a zoo?
+							</li>
+
+						</ol>
+					</div>
+				</div>
+			</section>
+			<section>
+				<a href="#" class="image"><img src="images/language.png" alt="" data-position="25% 25%" /></a>
+				<div class="content">
+					<div class="inner">
+						<h2>Which Language To Learn?</h2>
+						<ol class="">
+							<li>
+								Should it be useful or cool?
+							</li>
+							<li>
+								Should it be easy or hard?
+							</li>
+							<li>
+								Prefer phonetics or grammar?
+							</li>
+
+						</ol>
+					</div>
+				</div>
+			</section>
+
+		</section>
+
+		<!-- Two -->
+		<section id="two" class="wrapper style3 fade-up">
+			<div class="inner">
+				<h2>What is a decision tree?</h2>
+				<p> A decision tree is a decision-making process that uses a tree-like model
+					of decisions and their possible consequences, often used in data analysis and machine learning.
+					Following are the strengths of
+					a Decision Tree.</p>
+				<div class="features">
+					<section>
+						<h3>Applications</h3>
+						<p>Decision trees are one of the powerful machine learning algorithms that can be used to model
+							complex datasets. They can be used in both regression and classification problems.</p>
+					</section>
+					<section>
+						<h3>Explainable</h3>
+						<p>Other than most machine learning models which are black boxes, decision trees are white
+							boxes. The predictions made by decision trees are explainable..</p>
+					</section>
+					<section>
+						<h3>Faster</h3>
+						<p>Unlike complex neural networks, training a decision tree is faster and hence more productive.
+						</p>
+					</section>
+
+					<section>
+						<h3>Intuitive</h3>
+						<p>Decision tree algorithms are way more intuitive and hence eay to grasp compared to complex
+							neural nets.</p>
+					</section>
+
+				</div>
+
+			</div>
+		</section>
+
+		<section id="three" class="wrapper style3 fade-up">
+			<div class="inner">
+				<div class="faetures">
+
+					<!-- Concept -->
+					<section>
+						<h2>Thought Experiment</h2>
+						<p>
+							You are a resident of New Delhi and this is the winter season. Also new year is not far
+							away, when you get a one week holiday. It is time to decide a place for perfect
+							vacation. You sit with your family and everyone starts to give opinions.
+							Someone says, they care about nothing but picturesque place to visit. Another says it is
+							all about good food. Someone is prioritizing the budget.
+						</p>
+						<p>
+							So you are stuck and no consensus is getting built. Should it be <b>Darjeeling, Shimla,
+								Jaipur, Kanyakumari or Mathura</b>?
+							Finally, you call an urgent meeting and get involved in a serious discussion with family
+							members. As a convener, your job is give robust arguments and build a consensus fast.
+							Here is how you can go about it:
+						</p>
+						<ol>
+							<li>It's winter so let's forget going North. So <b>Darjeeling, Shimla</b> cancelled.</li>
+							<li>Budget demands not to travel too far, so <b>Kanyakumari</b> is cancelled.</li>
+							<li>We already visited <b>Mathura</b> two years back so we should explore something new.
+								So</li>
+							<b>Mathura</b> is cancelled.
+							<li>Let's plan to travel <b>Jaipur!</b></li>
+						</ol>
+
+						<p>
+							By carefully considering important criteria's, we can come to a consensus quickly. The
+							Decision Tree is all about picking the right criteria to split the dataset to arrive at
+							some conclusions fast.
+						</p>
+
+					</section>
+
+					<!-- Termonology -->
+					<section>
+						<h2>Terminology</h2>
+						<div class="box alt">
+							<div class="row gtr-uniform">
+								<div class="col-12">
+									<span class="">
+										<img src="images/termonology.png" width="600"
+											alt="image for termonology of decision trees" />
+									</span>
+								</div>
+								<p>As you can see from the diagram above, a decision tree starts with a root node,
+									which
+									does not have any incoming branches. The outgoing branches from the root node
+									then feed
+									into the internal nodes, also known as decision nodes. Based on the available
+									features,
+									both node types conduct evaluations to form homogenous subsets, which are
+									denoted by
+									leaf nodes, or terminal nodes. The leaf nodes represent all the possible
+									outcomes within
+									the dataset.</p>
+
+							</div>
+						</div>
+
+					</section>
+				</div>
+			</div>
+		</section>
+		<!--  -->
+		<section id="four" class="wrapper style3 fade-up">
+			<div class="inner">
+				<div class="faetures">
+					<!-- Concept -->
+					<section>
+						<h2>Mathematical Tools</h2>
+						<div class="box alt">
+							<div class="row gtr-uniform">
+								<p>While there are multiple ways to select the best attribute at each node, two
+									methods, information gain and Gini impurity, act as popular splitting criterion
+									for decision tree models.
+								</p>
+								<div class="col-12" style="display: inline;">
+									<span class="">
+										<img src="images/entropy_curve.png" width="600" class="img_inline"
+											alt="image for entropy formul for decision trees" />
+
+									</span>
+
+									<blockquote>
+										<h3>Entropy</h3>
+										H(p) = p * log(p) - (1 - p) * log(1 - p)
+										<br><br>
+										<h3>Information gain </h3>
+										IG = H(parent) - (W<sub>left</sub> * H(p<sub>left</sub>) +
+										(W<sub>right</sub> *
+										H(p<sub>right</sub>)))
+									</blockquote>
+									<p>
+										Our goal is to maximize <b>information gain</b>. Let's look at a <b>Cat's
+											classifier</b> examples to see wich might be a good fit.
+									</p>
+
+								</div>
+
+
+								<div class="col-12">
+									<span class="">
+										<img src="images/decision_tree_options.png" width="600"
+											alt="image for termonology of decision trees" />
+									</span>
+									<blockquote>
+										<b>TRY IT YOURSELF!</b>
+										<ol>
+											<li>
+												IG = 1 - (5 / 10 * H(0.8) + 5 / 10 * H(0.2)) = 0.28
+											</li>
+											<li>
+												IG = 1 - (7 / 10 * H(0.57) + 3 / 10 * H(0.33)) = 0.03
+											</li>
+											<li>
+												IG = 1 - (4 / 10 * H(0.75) + 6 / 10 * H(0.33)) = 0.12
+											</li>
+											<li>
+												IG = 1 - (5 / 10 * H(1.0) + 6 / 10 * H(0.0)) = 1.0
+											</li>
+										</ol>
+									</blockquote>
+
+
+									<p>It is clear that if we have DNA information, we should split the data based
+										on
+										DNA. If DNA feature data is not available, we can split on ear shape for
+										best
+										result.</p>
+								</div>
+
+
+							</div>
+						</div>
+
+					</section>
+
+
+				</div>
+			</div>
+		</section>
+
+		<section id="five" class="wrapper style3 fade-up">
+			<div class="inner">
+				<div class="faetures">
+					<!-- Summary -->
+					<section>
+						<h2>Summary</h2>
+						<div class="box alt">
+							<div class="row gtr-uniform">
+
+								<p>Procedure to find the best possible decision tree.
+								</p>
+
+								<ol style="margin-left: 12px;padding-top: 0px;">
+									<li>Start with all examples at the root node</li>
+									<li>Calculate information gain for all possible features, and pick the one with
+										the highest information gain</li>
+									<li>Split dataset according to selected feature, and create left and right
+										branches of the tree</li>
+
+									<li>Keep repeating splitting process until stopping criteria is met:
+										<ul>
+											<li>When a node is 100% one class</li>
+											<li>When splitting a node will result in the tree exceeding a maximum
+												depth</li>
+											<li>Information gain from additional splits is less than threshold</li>
+											<li>When number of examples in a node is below a threshold</li>
+										</ul>
+									</li>
+
+
+								</ol>
+
+							</div>
+						</div>
+
+					</section>
+
+
+				</div>
+			</div>
+		</section>
+
+	</div>
+
+	<!-- Footer -->
+	<footer id="footer" class="wrapper style1-alt">
+		<div class="inner">
+			<ul class="menu">
+				<li>Created By Vikas.</li>
+				<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+			</ul>
+		</div>
+	</footer>
+
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.scrollex.min.js"></script>
+	<script src="assets/js/jquery.scrolly.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
